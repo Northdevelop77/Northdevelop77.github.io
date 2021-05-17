@@ -101,9 +101,7 @@ header nav a.activo {
     margin-right: 1.25em;
 }
 
-#menu-icon {
-    display: none;
-}
+
 
 @media screen and (max-width: 800px) {
     
@@ -111,17 +109,41 @@ header nav a.activo {
     
 
     nav {
-       position: absolute;
-       display: flex;
-       flex-direction: column;
-       margin: auto;
-       margin-top: 80px;
-       background: rgba(0, 0, 0, .50);
-       display: none;
+  position: absolute;
+  top: 70px;
+  background: var(--fondo);
+  left: 0;
+  width: 100vh;
+
    }
 
+   nav a{
+    display: none;
+    padding: auto;
+    height: 100%;
+   }
+
+   nav a {
+    font-size: x-large;
+
+   }
+
+   nav .show {
+    display: block;
+    margin-bottom: 25px;
+   }
+
+
    .button-info, .button-list, .button-play {
-       margin-bottom: 20px;
+       position: absolute; 
+background: none;
+   }
+
+
+
+   .button-play {
+       position: relative;
+       top: -10px
    }
    
    main .descripcion {
@@ -161,21 +183,18 @@ header nav a.activo {
        margin-bottom: -25px;
    }
 
-   .pelicula-principal .button-info, .button-list, .button-play{
-    display: grid;
-    width: 100%;
-    grid-template-areas: "mas Informacion reproducir mi Lista";
-    justify-content: align-content: start;
+   .pelicula-principal .button-info, .button-list{
+    display: flex;
+    width: 20%;
     max-width: 300px;
-    min-width: 200px;
-    margin-right: 0px;
+    min-width: 15px;
+    margin: -25;
+    padding: 10px;
+    font-size: 10px;
    }
 
-
-
-   .pelicula-principal .button-play {
-       background: #fff;
-       color: #000;
+   .button-info {
+       right: 164px;
    }
 
    #menu-icon button.open .top-line {
@@ -260,6 +279,4 @@ header nav a.activo {
         transform: translateY(0px) rotate(0deg) ;
     }
 }
-
-
 }

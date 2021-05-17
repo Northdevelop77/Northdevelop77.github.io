@@ -303,6 +303,11 @@ footer {
     flex-direction: column;
   }
 
+  nav .marco {
+    height: 100vh;
+  }
+
+
   .menu-icon {
     display: block;
     width: 80px;
