@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthVideo</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">
+                NorthVideo
+            </h2>
+            <nav>
+                <a href="#" class="activo">Inicio</a>
+                <a href="#">Programas</a>
+                <a href="#">Peliculas</a>
+                <a href="#">Mis recientes</a>
+                <a href="#">Mi lista</a>
+            </nav>
+            <div id="menu-icon">
+                <div id="hamburger-container">
+                    <button id="hamburger">
+                    <span class="top-line">
+                    </span>
+                    <span class="middle-line">            
+                    </span>
+                    <span class="bottom-line">
+                    </span>
+                    </button>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Intelestelar</h3>
+                <p class="descripcion">Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.   
+                </p>
+                <div class="rep-menu">
+                    <button role="button" class="button-play"><i class="fas fa-play-circle"></i>Reproducir</button>
+                    <button role="button" class="button-info"><i class="fas fa-info-circle"></i>Mas Informacion</button>
+                    <button role="button" class="button-list"><i class="fas fa-plus-circle"></i>Mi Lista</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script>
+        const nav = document.querySelector('#hamburger');
+        nav.addEventListener('click', e =>{
+            nav.classList.toggle('open');
+        });
+
+
+
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,265 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+   
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #fff;
+}
+
+
+.pelicula-principal {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../Images/backdrop.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.pelicula-principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.5em;
+}
+
+.pelicula-principal .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.pelicula-principal .button-play, .button-list, .button-info {
+    background: rgba(0, 0, 0, .50);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula-principal .button-play:hover, .button-list:hover, .button-info:hover {
+    background: #fff;
+    color: #000;
+}
+
+.pelicula-principal .button-info i, .button-list i, .button-play i {
+    margin-right: 1.25em;
+}
+
+#menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    
+    
+    
+
+    nav {
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+       margin-top: 80px;
+       background: rgba(0, 0, 0, .50);
+       display: none;
+   }
+
+   .button-info, .button-list, .button-play {
+       margin-bottom: 20px;
+   }
+   
+   main .descripcion {
+       display: none;
+   }
+
+   main .titulo {
+       margin-bottom: -100px;
+   }
+
+   #menu-icon {
+       display: block;
+   }
+
+   #hamburger-container button {
+       background: none;
+       border: 0; 
+       padding: 0;
+       cursor: pointer;
+       width: 60px;
+       height: 60px;
+   }
+
+   #hamburger-container button span {
+    border-radius: 5px;
+    background: #fff;
+    display: block;
+    width: 60%;
+    margin: 5px; 
+    height: 2px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+   }
+
+   header {
+       margin-top: -25px;
+       margin-bottom: -25px;
+   }
+
+   .pelicula-principal .button-info, .button-list, .button-play{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "mas Informacion reproducir mi Lista";
+    justify-content: align-content: start;
+    max-width: 300px;
+    min-width: 200px;
+    margin-right: 0px;
+   }
+
+
+
+   .pelicula-principal .button-play {
+       background: #fff;
+       color: #000;
+   }
+
+   #menu-icon button.open .top-line {
+       animation-name: top-animation;
+   }
+
+   #menu-icon button.open .middle-line {
+        animation-name: middle-animation;
+    }
+
+    #menu-icon button.open .bottom-line {
+        animation-name: buttom-animation;
+    }
+
+    #menu-icon button .top-line {
+        animation-name: top-animation-close;
+    }
+ 
+    #menu-icon button .middle-line {
+         animation-name: middle-animation-close;
+     }
+ 
+     #menu-icon button .bottom-line {
+         animation-name: buttom-animation-close;
+     }
+
+@keyframes top-animation {
+    50%, 100% {
+        margin: 0px auto;
+        transform: translateY(2px) rotate(-45deg) ;
+    }
+}
+
+@keyframes middle-animation {
+    20%, 100% {
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes buttom-animation {
+    50%, 100% {
+        margin: 0 auto;
+            transform: translateY(-2px) rotate(45deg) ;
+    }
+}
+
+@keyframes top-animation-close {
+    0% {
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg) ;
+    }
+    50%, 100% {
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg) ;
+    }
+    
+}
+
+@keyframes middle-animation-close {
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100%{
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+@keyframes buttom-animation-close {
+    0% {
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg) ;
+    }
+
+    50%, 100% {
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg) ;
+    }
+}
+
+
+}
